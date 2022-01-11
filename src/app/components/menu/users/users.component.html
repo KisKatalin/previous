@@ -1,0 +1,14 @@
+<app-active-menu></app-active-menu>
+<div class="parent">
+  <div class="header">
+  <h1 class="headerText">Plan your day!</h1>
+  <h2 class="headerCount" >User: Ivan Ivanov. Count of Task {{count}} </h2>
+  </div>
+  <hr>
+  <div class="form">
+    <input type="text" id="inpt" [(ngModel)]="newTask">
+    <input type="button" id="btn-add" class="btn" (click)="addUser()"  value="Add">
+  </div>
+  <hr>
+  <app-child [arr]="arr" (fromChild) = "getCountPar($event)"></app-child>
+  </div>

@@ -1,0 +1,16 @@
+<app-active-menu></app-active-menu>
+<div id="form">
+<div id="first">
+  <span id="text">Bad words:</span>
+  <span id="words">{{words}}</span>
+</div>
+<div id="second">
+<input  [class.error]="errorInpt" type="text" [placeholder]="placeWorld" id="word-impt" [(ngModel)]="newWord">
+<input type="button" (click)="addNewWord()" value="Add" id="add-btn">
+<input type="button" (click)="reset()" value="Reset" id="reset-btn">
+</div>
+<div id="third">
+  <textarea  [class.error]="errorText" id="textarea" cols="30" rows="10" [placeholder]="placeText"  [(ngModel)]="text"></textarea>
+  <input [class.true]="cenzorTrue" (click)="cenzored()" type="button" value="Cenzor" id="cenzor-btn">
+</div>
+</div>

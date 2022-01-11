@@ -1,0 +1,32 @@
+
+<div class="child">
+  <table id="table">
+    <tr class="first-tr">
+      <th>#</th>
+      <th>Task</th>
+      <th>Check</th>
+      <th>DONE/IN PROGRESS</th>
+      <th>Edit</th>
+      <th>DELETE</th>
+    </tr>
+    
+    <tr class="newTr" *ngFor="let item of arr; index as i">
+      <th>{{i + 1}}</th>
+      <th>{{item.task}}</th>
+      <th> <input (change)="isChecked(i)" type="checkbox" id="checkbox"></th>
+      <th>
+        <span class="done" *ngIf="item.check">DONE</span>
+        <span class="progress" *ngIf="!item.check">In PROGRESS</span>
+      </th>
+      <th class="th-btn"><button value="Edit" class="btnTable" id="btn-edit2" (click)="editTask(i)">Edit</button></th>
+      <th class="th-btn"><button value="Delete" class="btnTable2" id="btn-delete" (click)="deleteTask(i)"
+          [disabled]="!item.check">Delete</button></th>
+          <hr>
+    </tr>
+    
+  </table>
+  <div class="edit" *ngIf="show">
+    <input type="text" [(ngModel)]="editTaskInpt" class="edit-inpt">
+    <input type="button" value="save" (click)="saveEditTask()" class="save-btn">
+  </div>
+</div>

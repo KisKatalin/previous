@@ -1,0 +1,37 @@
+.menu{
+  display: flex;
+  flex-direction: row;
+  margin-top: 75px;
+  justify-content: space-evenly;
+}
+.block{
+border: 1px solid rgb(190, 190, 190);
+border-radius: 5px;
+height: 338px;
+box-sizing: border-box;
+}
+img{
+height: 200px;
+width: 300px;
+}
+h4{
+text-align: center;
+color: rgb(201, 11, 11);
+}
+.buttonDiv{
+border-top: 1px solid rgb(190, 190, 190);
+background-color: whitesmoke;
+height: 70px;
+display: flex;
+align-items: center;
+justify-content: center;
+
+}
+.buttonDiv button{
+  border: none;
+  background-color: #00bf2e;
+  color: white;
+  border-radius: 5px;
+  height: 40px;
+  width: 250px;
+}
